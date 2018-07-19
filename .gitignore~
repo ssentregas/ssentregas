@@ -1,0 +1,6 @@
+.DS_Store
+config.php
+analyticstracking.php
+.idea/
+/nbproject/private/
+/assets/imagens
