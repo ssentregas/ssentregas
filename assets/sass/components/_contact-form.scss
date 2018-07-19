@@ -1,0 +1,89 @@
+/* 05.16. Contact Form */
+
+.form-text,
+.form-textarea,
+.form-date {
+    background: $light-color;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+    width: 100%;
+    padding: 11px;
+    margin-bottom: 15px;
+    color: $text-color;
+    &:focus {
+        border-color: rgba(0, 0, 0, 0.1);
+        background: #ffffff;
+    }
+}
+
+.form-textarea {
+    height: 162px;
+}
+
+.form-date {
+    padding: 10px 11px;
+}
+
+.form-submit {
+    float: right;
+    margin-bottom: 0;
+}
+
+.form {
+    .form-response-output {
+        margin: 5px 0;
+        padding: 10px 20px;
+        border-radius: 2px;
+    }
+    .form-validation-errors {
+        background-color: #faf8d2;
+        border: 2px solid #faf8d2;
+        color: darken(#faf8d2, 50);
+    }
+    .form-mail-sent-ng {
+        background-color: #ffe5e5;
+        border: 2px solid #ffe5e5;
+        color: darken(#ffe5e5, 50);
+    }
+    .form-mail-sent-ok {
+        background-color: #dcf2dc;
+        border: 2px solid #dcf2dc;
+        color: darken(#dcf2dc, 50);
+    }
+    .form-not-valid-tip {
+        margin: 0 0 5px 0;
+    }
+}
+
+input[type="date"] {
+    line-height: inherit;
+}
+
+.help-block {
+    margin-top: -6px;
+    margin-bottom: 15px;
+}
+
+.alert {
+    padding: 10px 15px;
+}
+
+.alert-warning {
+    background-color: #faf8d2;
+    border: 2px solid #faf8d2;
+    color: #b8b015;
+}
+
+.alert-danger {
+    background-color: #ffe5e5;
+    border: 2px solid #ffe5e5;
+    color: #e50000;
+}
+
+.alert-success {
+    background-color: #dcf2dc;
+    border: 2px solid #dcf2dc;
+    color: #389738;
+}
+

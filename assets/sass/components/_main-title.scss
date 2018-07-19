@@ -1,0 +1,24 @@
+/* 05.09. Main Title */
+.main-title {
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	margin-bottom: 30px;
+}
+
+.main-title__primary {
+	font-family: $primary-font;
+	font-weight: bold;
+	font-size: 30px;
+	color: #414447;
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+
+.main-title__secondary {
+	font-family: $primary-font;
+	font-weight: normal;
+	font-size: 14px;
+	color: #a6acb2;
+	margin-top: -20px;
+	margin-bottom: 30px;
+	letter-spacing: 0;
+}

@@ -1,0 +1,97 @@
+/*------------------------------------*\
+    Local variables
+\*------------------------------------*/
+
+// Brand colors
+// -------------------------
+$button-color: #957aca; // For all normal buttons
+$informative-color: #73bfa6; // For categories, tags, testimonials
+$attention-color: #fd7062; // For important informations
+$light-color: #f2f4f7;
+$dark-color: #333333;
+// Transitions
+// -------------------------
+$primary-transition: all 150ms ease-out;
+// Typography
+// -------------------------
+$primary-font: 'Merriweather',
+Helvetica,
+Arial,
+sans-serif; // For Content
+$secondary-font: 'Montserrat',
+Helvetica,
+Arial,
+sans-serif; // For Headings and Navigation
+
+/*------------------------------------*\
+    Bootstrap overrides
+\*------------------------------------*/
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+$brand-primary: $button-color;
+$brand-success: $informative-color;
+$brand-info: #1fa7da;
+// $brand-warning:         $attention-color;
+$brand-danger: $attention-color;
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+//** Background color for `<body>`.
+$body-bg: $light-color;
+//** Global text color on `<body>`.
+$text-color: #919699;
+//** Global textual link color.
+$link-color: #1fa7da;
+//** Link hover color set via `darken()` function.
+$link-hover-color: darken($link-color, 5%);
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+$font-family-sans-serif: $secondary-font;
+$font-family-serif: $primary-font;
+$font-family-base: $font-family-serif;
+$font-size-base: 13px;
+// $font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+// $font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3: 24px;
+$font-size-h4: 18px;
+// $font-size-h5:            $font-size-base !default;
+// $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base: 1.6;
+//** By default, this inherits from the `<body>`.
+$headings-font-family: $font-family-sans-serif;
+$headings-font-weight: 700;
+$headings-line-height: 1.1;
+$headings-color: $dark-color;
+//== Iconography
+//
+//## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
+//** Load fonts from this directory.
+$icon-font-path: "../assets/fonts/bootstrap/";
+//== Grid system
+//
+//## Define your custom responsive grid.
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width: 20px;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint: 992px;
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+$btn-font-weight: bold;
+$btn-default-color: #676b6f;
+$btn-default-bg: transparent;
+$btn-default-border: #ebedf2;
+$btn-primary-bg: $brand-primary;
+$btn-primary-border: $brand-primary;
+$btn-success-bg: $brand-success;
+$btn-success-border: $brand-success;
+$btn-info-bg: $brand-info;
+$btn-info-border: $brand-info;
+$btn-danger-bg: $brand-danger;
+$btn-danger-border: $brand-danger;
+

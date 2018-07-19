@@ -1,0 +1,186 @@
+/* 05.02. Header */
+.header {
+	@include clearfix;
+	background-color: #ffffff;
+	margin-bottom: 35px;
+	box-shadow: 0 2px 3px 0 rgba(31,31,31,0.08);
+	padding: 0 30px;
+}
+
+/* Logo */
+.logo {
+	margin: 5px 0;
+	float: left;
+	max-width: 58%;
+
+	@media (min-width: $screen-xs-min) {
+		max-width: 100%;
+		margin: 10px 0;
+	}
+
+	@media (min-width: $screen-md-min) {
+		text-align: center;
+		display: block;
+		float: none;
+	}
+
+	@media (min-width: $screen-lg-min) {
+		float: left;
+	}
+
+	.img-responsive {
+		@media (min-width: $screen-md-min) {
+			display: inline-block;
+			text-align: center;
+		}
+	}
+}
+
+/* Header Widgets Layout and Divider */
+.header-widgets {
+	text-align: center;
+	clear: both;
+
+	@media (min-width: $screen-md-min) {
+		margin-top: 12px;
+		margin-bottom: 24px;
+	}
+
+	@media (min-width: $screen-lg-min) {
+		clear: none;
+		margin-top: 35px;
+		margin-bottom: 35px;
+		text-align: right;
+	}
+
+	&__widget {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		border-top: 1px solid rgba(0,0,0,0.1);
+
+		@media (min-width: $screen-md-min) {
+			padding: 0 20px;
+			position: relative;
+			display: inline-block;
+			border-top: none;
+			vertical-align: top;
+
+			// Divider between widgets
+			&::after {
+				position: absolute;
+				content: "";
+				height: 40px;
+				width: 1px;
+				background-color: rgba(0,0,0,0.1);
+				top: calc(50% - 20px);
+				right: 0;
+			}
+		}
+
+		&:last-of-type {
+			@media (min-width: $screen-md-min) {
+				padding-right: 0;
+
+				// This will hide the last divider
+				&::after {
+					display: none;
+				}
+			}
+		}
+
+		&:first-of-type {
+			@media (min-width: $screen-md-min) {
+				padding-left: 0;
+			}
+		}
+	}
+
+	.widget_search {
+		margin-bottom: 10px;
+		padding-top: 10px;
+
+		@media (min-width: $screen-md-min) {
+			margin-bottom: 0;
+			padding: 11px 20px 0 20px;
+		}
+	}
+
+	/* Icon-box */
+	.icon-box {
+		@include clearfix;
+
+		&:hover {
+			text-decoration: none;
+
+			> .fa {
+				color: darken(#ebedf2, 5);
+			}
+		}
+	}
+
+	// Buttons are correctly aligned
+	.btn {
+		margin-bottom: 10px;
+
+		@media (min-width: $screen-md-min) {
+			margin-bottom: 0;
+		}
+	}
+}
+
+/* Header widgets with flexbox */
+html.flexbox {
+	.header-widgets {
+		@media (min-width: $screen-md-min) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		@media (min-width: $screen-lg-min) {
+			justify-content: flex-end;
+		}
+	}
+}
+
+// Mobile Toggle Navigation
+.navbar-toggle {
+	background-color: $button-color;
+	border-radius: 2px;
+	padding: 10px 12px;
+	margin: 10px 0;
+	transition: $primary-transition;
+
+	@media (min-width: $screen-xs-min) {
+		margin: 34px 0 33px 0;
+	}
+
+	&:hover {
+		background: darken($button-color, 5);
+		text-decoration: none;
+	}
+
+	.icon-bar {
+		background: #ffffff;
+		width: 18px;
+		height: 3px;
+
+		& + .icon-bar {
+			margin-top: 3px;
+		}
+	}
+}
+
+.navbar-toggle__text {
+	font-family: $secondary-font;
+	font-weight: bold;
+	color: #ffffff;
+	display: inline-block;
+	padding: 0 10px 0 0;
+}
+
+.navbar-toggle__icon-bar {
+	vertical-align: middle;
+	display: inline-block;
+	height: 17px;
+}

@@ -1,0 +1,158 @@
+/* 05.05. Top Navigation */
+.top-navigation {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+
+	@media (min-width: $screen-md-min) {
+		text-align: right;
+	}
+
+	a {
+		color: #edeff2;
+	}
+
+	> li {
+		list-style: none;
+		position: relative;
+		display: inline-block;
+
+		> a {
+			text-decoration: none;
+			display: block;
+			padding: 5px 2px 8px 2px;
+			margin: 0 5px;
+
+			@media (min-width: $screen-md-min) {
+				padding: 8.5px 0 8.5px 15px;
+				margin: 0;
+			}
+
+			&:hover {
+				color: #ffffff;
+				background: none;
+			}
+		}
+
+		&:hover {
+			> .sub-menu {
+				visibility: visible;
+				opacity: 1;
+			}
+
+			> a {
+				color: #ffffff;
+
+				&::after {
+					color: #edeff2;
+				}
+			}
+		}
+	}
+
+	.sub-menu {
+		z-index: 100;
+		text-align: left;
+		display: block;
+		visibility: hidden;
+		opacity: 0;
+		list-style: none;
+		min-width: 120px;
+		width: auto;
+		position: absolute;
+		padding: 0;
+		left: 0;
+		top: 100%;
+		transition: $primary-transition;
+
+		> li {
+			position: relative;
+
+			> a {
+				background-color: #8b949c;
+				border-bottom: 1px solid #99a5ad;
+				padding: 5px 15px;
+				display: block;
+				white-space: nowrap;
+
+				&:hover {
+					color: #ffffff;
+					text-decoration: none;
+				}
+			}
+
+			&:hover {
+				> .sub-menu {
+					visibility: visible;
+					opacity: 1;
+				}
+
+				&.menu-item-has-children {
+					> a {
+						@media (min-width: $screen-md-min) {
+							border-top-right-radius: 0;
+							border-bottom-right-radius: 0;
+						}
+					}
+				}
+			}
+
+			> .sub-menu {
+				margin-top: 0;
+				left: 100%;
+				top: 0;
+
+				> li {
+					> a {
+						border-left: 1px solid #99a5ad;
+					}
+
+					&:first-of-type {
+						> a {
+							border-bottom-left-radius: 0;
+							border-top-right-radius: 2px;
+						}
+					}
+
+					&:last-of-type {
+						> a {
+							border-bottom-right-radius: 2px;
+						}
+					}
+
+					&:hover {
+						&.menu-item-has-children {
+							> a {
+								border-top-right-radius: 0;
+								border-bottom-right-radius: 0;
+							}
+						}
+					}
+				}
+			}
+
+			&:last-of-type {
+				> a {
+					border-bottom-left-radius: 2px;
+					border-bottom-right-radius: 2px;
+				}
+			}
+		}
+	}
+
+	> .menu-item-has-children {
+		> a {
+			padding-right: 12px;
+			position: relative;
+
+			&::after {
+				font-family: "FontAwesome";
+				content: "\f0d7";
+				color: #b6c4d1;
+				position: absolute;
+				right: 0;
+				bottom: calc(50% - 8px);
+			}
+		}
+	}
+}

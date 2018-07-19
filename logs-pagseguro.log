@@ -1,0 +1,8 @@
+
+
+12/12/2017 15:45:08 PagSeguro.Session[info]: Begin
+12/12/2017 15:45:09 PagSeguro.Session[info]: POST: https://ws.pagseguro.uol.com.br/v2/sessions?email=vendas%40ssentregas.com.br&token=A7C89AFA9AB34084A173FFD5F02191FF
+12/12/2017 15:45:12 PagSeguro.Session[info]: Session ID: a2970d7c57a64a1d9c2daa2ff6e43d92
+12/12/2017 15:45:12 PagSeguro.Transactions.Search.Code[info]: Begin
+12/12/2017 15:45:12 PagSeguro.Transactions.Search.Code[info]: GET: https://ws.pagseguro.uol.com.br/v3/transactions/7F32BBFF-D9B8-4C9A-BA5A-5036F4A01DA6/?email=vendas%40ssentregas.com.br&token=A7C89AFA9AB34084A173FFD5F02191FF
+12/12/2017 15:45:14 PagSeguro.Transactions.Search.Code[info]: Date: 2017-12-12T11:05:56.000-02:00, Code: 7F32BBFF-D9B8-4C9A-BA5A-5036F4A01DA6

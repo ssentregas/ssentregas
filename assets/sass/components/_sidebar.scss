@@ -1,0 +1,30 @@
+/* 05.04. Sidebar Layout */
+
+/* Widgets in the Sidebar */
+.sidebar {
+	.widget {
+		background-color: #ffffff;
+		padding: 20px;
+		margin-bottom: 20px;
+		width: 100%;
+		box-shadow: 0 2px 3px 0 rgba(31,31,31,0.05);
+		border-radius: 2px;
+
+		&:last-of-type {
+			margin-bottom: 60px;
+		}
+	}
+
+	.widget-banner,
+	.widget-skype {
+		padding: 0;
+		background-color: transparent;
+		box-shadow: none;
+		border-radius: 0;
+	}
+}
+
+.sidebar__headings {
+	margin: -2px 0 15px 0;
+	font-weight: bold;
+}

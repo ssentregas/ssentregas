@@ -1,0 +1,198 @@
+/* 05.07. Buttons */
+.btn {
+	font-family: $font-family-sans-serif;
+	font-size: 12px;
+	transition: $primary-transition;
+	padding: 0 20px;
+	border-radius: 2px;
+	height: 40px;
+	line-height: 40px;
+	margin-bottom: 10px;
+	text-align: left;
+
+	.fa {
+		font-size: 20px;
+		vertical-align: middle;
+		margin-right: 5px;
+	}
+
+	.footer & {
+		color: #ffffff;
+
+		&:hover {
+			color: #ffffff;
+		}
+	}
+}
+
+/* Rounded corner */
+.btn-rounded {
+	border-radius: 20px;
+}
+
+/* Button Primary*/
+.btn-primary {
+	&:hover {
+		background-color: darken($button-color, 5);
+		border-color: darken($button-color, 5);
+	}
+
+	&:focus {
+		background: $button-color;
+		border-color: $button-color;
+	}
+
+	&:active {
+		background: darken($button-color, 8);
+		border-color: rgba(0,0,0,0.05);
+		box-shadow: inset 0 1px 2px rgba(0,0,0,.125);
+	}
+}
+
+/* Button Danger */
+.btn-danger {
+	&:hover {
+		background-color: darken($attention-color, 5);
+		border-color: darken($attention-color, 5);
+	}
+
+	&:focus {
+		background: $attention-color;
+		border-color: $attention-color;
+	}
+
+	&:active {
+		background: darken($attention-color, 8);
+		border-color: rgba(0,0,0,0.05);
+		box-shadow: inset 0 1px 2px rgba(0,0,0,.125);
+	}
+}
+
+/* Button Success */
+.btn-success {
+	&:hover {
+		background-color: darken($informative-color, 5);
+		border-color: darken($informative-color, 5);
+	}
+
+	&:focus {
+		background: $informative-color;
+		border-color: $informative-color;
+	}
+
+	&:active {
+		background: darken($informative-color, 8);
+		border-color: rgba(0,0,0,0.05);
+		box-shadow: inset 0 1px 2px rgba(0,0,0,.125);
+	}
+}
+
+/* Button Info */
+.btn-info {
+	&:hover {
+		background-color: darken($btn-info-bg, 5);
+		border-color: darken($btn-info-bg, 5);
+	}
+
+	&:focus {
+		background: $btn-info-bg;
+		border-color: $btn-info-bg;
+		color: #ffffff;
+	}
+
+	&:active {
+		background: darken($btn-info-bg, 8);
+		border-color: rgba(0,0,0,0.05);
+		box-shadow: inset 0 1px 2px rgba(0,0,0,.125);
+	}
+}
+
+/* Button Default */
+.btn-default {
+	box-shadow: 0 1px 1px rgba(31,31,31,0.05);
+
+	.fa {
+		font-size: 16px;
+		margin: 0 5px 2px -10px;
+		padding-left: 1px;
+	}
+
+	&:hover {
+		box-shadow: 0 1px 1px rgba(31,31,31,0.1);
+		border-color: darken(#ebedf2, 5);
+		color: darken(#676b6f, 5);
+	}
+
+	&:focus {
+		box-shadow: 0 1px 1px rgba(31,31,31,0.05);
+		border-color: #ebedf2;
+	}
+
+	&:active {
+		border-color: darken(#ebedf2, 8);
+		color: darken(#676b6f, 8);
+		box-shadow: inset 0 1px 2px rgba(0,0,0,.125);
+	}
+}
+
+// Featured Page Specific
+.btn-featured-page {
+	text-align: center;
+	position: relative;
+	margin: 20px;
+	text-transform: uppercase;
+	display: block;
+	font-weight: normal;
+
+	@media (min-width: $screen-md-min) {
+		padding: 0 10px;
+	}
+
+	@media (min-width: $screen-lg-min) {
+		padding: 0 20px;
+	}
+
+	&::before {
+		position: absolute;
+		content: "";
+		height: 1px;
+		width: 100%;
+		top: -20px;
+		background-color: rgba(0,0,0,0.1);
+		left: 0;
+	}
+}
+
+// Class for featured link in header custom menu
+.header {
+	.menu {
+		.featured-link {
+			background-color: $button-color;
+			border-radius: 2px;
+			text-align: center;
+			margin: 20px 0;
+
+			@media (min-width: $screen-md-min) {
+				margin: 0 20px;
+				text-align: left;
+			}
+
+			> a {
+				color: #ffffff;
+				padding: 10px 30px;
+				font-weight: normal;
+				transition: $primary-transition;
+
+				&::before {
+					display: none;
+				}
+
+				&:hover {
+					background-color: darken($button-color, 5);
+					text-decoration: none;
+					color: #ffffff;
+				}
+			}
+		}
+	}
+}

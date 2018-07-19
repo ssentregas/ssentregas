@@ -1,0 +1,143 @@
+/*
+
+Theme : Blue
+Author : Surjith S M
+
+*/
+
+a,
+.footer a {
+    color: #1fa7da;
+}
+
+a:hover,
+.footer a:hover {
+    color: #1b93c0;
+}
+
+.btn-primary,
+.btn-primary:focus,
+.widget_search.search-submit,
+.widget_search.search-submit:focus,
+body.woocommerce-page.widget_shopping_cart_content.buttons.checkout,
+body.woocommerce-page.widget_product_search.search-field+input,
+body.woocommerce-page button.button.alt,
+body.woocommerce-page#review_form#respond input#submit,
+body.woocommerce-page.woocommerce-info a.button,
+body.woocommerce-page.woocommerce-message a.button,
+body.woocommerce-page.woocommerce-error a.button,
+.woocommerce-cart.wc-proceed-to-checkout a.checkout-button,
+body.woocommerce-page#payment#place_order,
+.woocommerce button.button.alt:disabled,
+.woocommerce button.button.alt:disabled:hover,
+.woocommerce button.button.alt:disabled[disabled],
+.woocommerce button.button.alt:disabled[disabled]:hover,
+.header.menu.featured-link {
+    background-color: #1fa7da;
+}
+
+.btn-primary,
+.btn-primary:focus,
+body.woocommerce-page.widget_shopping_cart_content.buttons.checkout {
+    border-color: #1fa7da;
+}
+
+.btn-primary:hover,
+.widget_search.search-submit:hover,
+body.woocommerce-page.widget_shopping_cart_content.buttons.checkout:hover,
+body.woocommerce-page.widget_product_search.search-field+input:hover,
+body.woocommerce-page.widget_product_search.search-field+input:focus,
+body.woocommerce-page button.button.alt:hover,
+body.woocommerce-page#review_form#respond input#submit:hover,
+body.woocommerce-page.woocommerce-info a.button:hover,
+body.woocommerce-page.woocommerce-message a.button:hover,
+body.woocommerce-page.woocommerce-error a.button:hover,
+.woocommerce-cart.wc-proceed-to-checkout a.checkout-button:hover,
+body.woocommerce-page#payment#place_order:hover,
+.header.menu.featured-link>a:hover {
+    background-color: #1b93c0;
+}
+
+.btn-primary:hover,
+body.woocommerce-page.widget_shopping_cart_content.buttons.checkout:hover {
+    border-color: #1b93c0;
+}
+
+.testimonial__quote::before,
+.latest-post__categories a,
+.about-us__tag,
+.meta-data__categories a,
+.widget_calendar caption,
+.widget_tag_cloud a,
+.pagination a:hover,
+.pagination.current,
+.btn-success,
+.btn-success:focus,
+body.woocommerce-page.widget_price_filter.ui-slider.ui-slider-handle,
+body.woocommerce-page.widget_price_filter.ui-slider.ui-slider-range,
+body.woocommerce-page nav.woocommerce-pagination ul li span.current,
+body.woocommerce-page nav.woocommerce-pagination ul li a:hover,
+body.woocommerce-page div.product.woocommerce-tabs ul.tabs li.active {
+    background-color: #9ba7b2;
+}
+
+blockquote,
+.btn-success {
+    border-color: #9ba7b2;
+}
+
+.latest-post__categories a:hover,
+.about-us__tag:hover,
+.meta-data__categories a:hover,
+.widget_tag_cloud a:hover,
+.btn-success:hover {
+    background-color: #8c9aa6;
+}
+
+.btn-success:hover,
+.main-navigation.sub-menu>li>.sub-menu {
+    border-color: #8c9aa6;
+}
+
+body.woocommerce-page ul.products li.product a:hover img,
+.woocommerce ul.products li.product a:hover img,
+body.woocommerce-page.star-rating,
+.woocommerce.star-rating,
+body.woocommerce-page p.stars a {
+    color: #9ba7b2;
+}
+
+@media(min-width:992px) {
+    .header.menu.sub-menu>li,
+    .main-navigation.sub-menu>li>a {
+        background-color: #9ba7b2;
+    }
+    .header.menu.sub-menu>li>a,
+    .header.menu.sub-menu>li>.sub-menu,
+    .main-navigation.sub-menu>li>a {
+        border-color: #8c9aa6;
+    }
+    .header.menu.sub-menu>li>a:hover,
+    .main-navigation.sub-menu>li>a:hover {
+        background-color: #8c9aa6;
+    }
+}
+
+.btn-danger,
+.btn-danger:focus {
+    background-color: #9ba7b2;
+}
+
+.btn-danger,
+.btn-danger:focus {
+    border-color: #9ba7b2;
+}
+
+.btn-danger:hover {
+    background-color: #8c9aa6;
+}
+
+.btn-danger:hover {
+    border-color: #8c9aa6;
+}
+

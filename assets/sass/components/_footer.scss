@@ -1,0 +1,87 @@
+/* 05.03. Footer */
+.footer-gradient {
+	height: 2px;
+	background: linear-gradient(to right, $button-color 25%,$informative-color 25%,$informative-color 50%,$link-color 50%,$link-color 50%,$link-color 75%,$attention-color 75%);
+}
+
+.footer {
+	background-color: #ffffff;
+}
+
+.footer-top {
+	padding: 30px 0;
+
+	@media (min-width: $screen-md-min) {
+		padding: 45px 0 50px 0;
+	}
+
+	.widget {
+		margin: 15px 0;
+
+		@media (min-width: $screen-md-min) {
+			margin: 0;
+		}
+	}
+}
+
+.footer-top__headings {
+	text-transform: uppercase;
+	font-size: 18px;
+	line-height: 25px;
+	margin-bottom: 10px;
+
+	@media (min-width: $screen-md-min) {
+		margin-bottom: 20px;
+	}
+}
+
+.footer-bottom {
+	text-align: center;
+	padding: 10px 0;
+
+	@media (min-width: $screen-md-min) {
+		text-align: left;
+		padding: 19px 0;
+	}
+}
+
+.footer-bottom__left {
+	display: inline-block;
+}
+
+.footer-bottom__right {
+	padding-top: 5px;
+
+	@media (min-width: $screen-md-min) {
+		float: right;
+		padding-top: 0;
+	}
+}
+
+.footer-bottom__payment-methods {
+	font-family: $secondary-font;
+	font-size: 13px;
+	color: $text-color;
+	padding-top: 8px;
+
+	.fa {
+		vertical-align: middle;
+	}
+}
+
+.footer-top__divider {
+	position: relative;
+
+	&::after {
+		position: absolute;
+		content: "";
+		background-color: rgba(0,0,0,0.1);
+		width: calc(100% - 20px);
+		height: 1px;
+		bottom: -30px;
+
+		@media (min-width: $screen-md-min) {
+			bottom: -50px;
+		}
+	}
+}

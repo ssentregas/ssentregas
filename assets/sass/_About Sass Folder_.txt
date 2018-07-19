@@ -1,0 +1,24 @@
+
+-------------------------------------------------------------------------------
+      				SASS
+-------------------------------------------------------------------------------
+
+SASS is a Preprocessor for CSS. It contains source code for the main CSS File.
+
+This folder is not needed for Production. Thus, No need to Upload it.
+
+-------------------------------------------------------------------------------
+
+You can simple edit the CSS styles directly in the files inside /CSS Folder. 
+Sass is just optional for those who know about it.
+
+-------------------------------------------------------------------------------
+
+To Edit Sass Folder, You'll need to know bit knowledge about SASS.
+You may learn it here : http://sass-lang.com/
+
+-------------------------------------------------------------------------------
+
+
+Thanks a lot,
+~Surjith

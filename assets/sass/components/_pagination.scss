@@ -1,0 +1,34 @@
+/* 05.12. Pagination */
+.pagination {
+	padding-top: 30px;
+	border-top: 1px solid $light-color;
+	font-family: $secondary-font;
+	font-weight: bold;
+	text-align: center;
+
+	.current,
+	.dots,
+	a {
+		display: inline-block;
+		width: 45px;
+		padding: 12px 0;
+		border-radius: 2px;
+		margin-right: 2px;
+		background: $light-color;
+		color: $dark-color;
+	}
+
+	a:hover,
+	.current {
+		background: $informative-color;
+		color: #ffffff;
+		text-decoration: none;
+	}
+
+	// hide the pagination title
+	.screen-reader-text {
+		position: absolute !important;
+		clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+		clip: rect(1px, 1px, 1px, 1px);
+	}
+}
