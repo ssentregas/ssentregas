@@ -4561,7 +4561,7 @@ tbody.collapse.in {
   .header-widgets {
     clear: none;
     margin-top: 35px;
-    margin-bottom: 35px;
+    margin-bottom: -7px;
     text-align: right;
   }
 }
