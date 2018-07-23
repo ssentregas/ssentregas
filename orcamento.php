@@ -22,9 +22,29 @@
 
     <script type="text/javascript">
 
-        var base = '', valorRoteiro = '', distancias='', tempo='', distanciaTotal='';
+        var base = '', valorRoteiro = '', distancias='', tempo='', distanciaTotal='', pagamento='';
 
         $(document).ready(function(){
+
+            $('#forma-pagamento').on('change', function() {
+                // alert( this.value );
+
+                if(this.value == 'dinheiro'){
+                    $('#form-troco').show();
+                }else{
+                    $('#form-troco').hide();
+                }
+            });
+
+            $('#troco').on('change', function() {
+                // alert( this.value );
+
+                if(this.value == 'sim'){
+                    $('#valor-troco').show();
+                }else{
+                    $('#valor-troco').hide();
+                }
+            });
 
         	$('#finalizar').click(function(){
         		$(this).hide();
@@ -32,6 +52,24 @@
         	});
 
         	$('#enviar').click(function(){
+
+                if($('#nome').val() == ''){
+                    alert('Digite o nome');
+                    $('#nome').focus();
+                    return false;
+                }
+
+                if($('#email').val() == ''){
+                    alert('Digite o email');
+                    $('#email').focus();
+                    return false;
+                }
+
+                if($('#telefone').val() == ''){
+                    alert('Digite o telefone');
+                    $('#telefone').focus();
+                    return false;
+                }
 
 				var pontos = [];
         		$.each($('#trajetos_table tbody tr'),function(i,v){
@@ -42,6 +80,14 @@
 						'ordem': $(this).attr('data-ordem')
 					});
         		});
+
+        		/*recuperando informações de pagamento*/
+                pagamento += '<b>Forma pagamento:</b> ' + $('#forma-pagamento').val() + '<br><b>Pagamento feito:</b> ' + $('#pagamento-feito').val();
+                if($('#forma-pagamento').val() == 'dinheiro'){
+                    pagamento += '<br><b>Troco para:</b> R$ ' + $("#valor-troco").val();
+                }
+
+                alert(pagamento);
 
         		$.ajax({
         			url: 'php/ControllerCliente.php?action=addCotacao',
@@ -55,7 +101,8 @@
         				nome: $('#nome').val(),
         				email: $('#email').val(),
         				celular: $('#telefone').val(),
-        				pontos: pontos
+        				pontos: pontos,
+                        pagamento: pagamento
         			},
         			'type': 'POST',
         			success: function(e){
@@ -121,6 +168,30 @@
                 if($('#destino').val() == ''){
                     alert('Digite um endereço para o ponto de destino');
                     $('#destino').focus();
+                    return false;
+                }
+
+                if($('#origem-complemento').val() == ''){
+                    alert('Digite um complemento para o ponto de origem');
+                    $('#origem-complemento').focus();
+                    return false;
+                }
+
+                if($('#destino-complemento').val() == ''){
+                    alert('Digite um complemento para o ponto de destino');
+                    $('#destino-complemento').focus();
+                    return false;
+                }
+
+                if($('#origem-fazer').val() == ''){
+                    alert('Digite fazer o que? Falar com quem? na origem');
+                    $('#origem-fazer').focus();
+                    return false;
+                }
+
+                if($('#destino-fazer').val() == ''){
+                    alert('Digite fazer o que? Falar com quem? no destino');
+                    $('#destino-fazer').focus();
                     return false;
                 }
                 
@@ -270,12 +341,12 @@
 		                                        </div><!-- /input-group -->
 	                                        </div>
 	                                        <div class="col-md-4">
-	                                        	<input type="text" placeholder="Exemplo: Bloco 1 Ap. 201" class="form-control complemento" />
+	                                        	<input type="text" id="origem-complemento" placeholder="Exemplo: Bloco 1 Ap. 201" class="form-control complemento" />
 	                                        </div>
                                         </div>
 
                                         <div class="input-group">
-                                            <input type="text" class="form-control observacao" placeholder="Fazer o que ? Falar com quem ?"/>
+                                            <input type="text" id="origem-fazer" class="form-control observacao" placeholder="Fazer o que ? Falar com quem ?"/>
                                         </div>
                                     </div>
                                     <br/>
@@ -289,11 +360,11 @@
                                         		</div><!-- /input-group -->
                                         	</div>
 	                                        <div class="col-md-4">
-	                                        	<input type="text" placeholder="Exemplo: Bloco 1 Ap. 201" class="form-control complemento" />
+	                                        	<input type="text" id="destino-complemento" placeholder="Exemplo: Bloco 1 Ap. 201" class="form-control complemento" />
 	                                        </div>
                                         </div>
                                         <div class="input-group">
-                                            <input type="text" class="form-control observacao" placeholder="Fazer o que ? Falar com quem ?"/>
+                                            <input type="text" id="destino-fazer" class="form-control observacao" placeholder="Fazer o que ? Falar com quem ?"/>
                                         </div>
                                     </div>
                                     <br/>
@@ -383,33 +454,33 @@
                                     	</div>
                                         <div class="row">
                                             <h4>Informações de pagamento:</h4>
-                                            <div class="col-md-4">
-                                                <label>Forma de Pagamento</label>
-                                                <select>
-                                                    <option value="cartao">Cartao</option>
+                                            <div class="col-md-3">
+                                                <label>Forma de Pagamento:</label>
+                                                <select id="forma-pagamento">
+                                                    <option value="cartao" selected>Cartao</option>
                                                     <option value="dinheiro">Dinheiro</option>
+                                                    <option value="faturado">Faturado</option>
+                                                    <option value="pagseguro">PagSeguro</option>
                                                 </select>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-3">
                                                 <label>Pagamento feito na:</label>
-                                                <select>
-                                                    <option value="origem">A. Origem</option>
+                                                <select id="pagamento-feito">
+                                                    <option value="origem" selected>A. Origem</option>
                                                     <option value="destino">B. Destino</option>
                                                 </select>
                                             </div>
-                                            <div class="row">
+                                            <div style="display: none" id="form-troco" class="row">
                                                 <div class="col-md-4">
-                                                    <label>Precisa de troco?</label>
-                                                    <select>
-                                                        <option value="nao">Não</option>
+                                                    <label>Precisa de troco para?</label>
+                                                    <select id="troco">
+                                                        <option value="nao" selected>Não</option>
                                                         <option value="sim">Sim</option>
                                                     </select>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <input type="text" placeholder="Exemplo: 50" class="form-control complemento" />
+                                                    <input style="display: none" type="text" id="valor-troco" name="valor-troco" placeholder="Exemplo: 50" class="form-control complemento" />
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div><br>
 
                                     	<span id="enviar" class="btn btn-primary">Finalizar pedido</span>
                                     </div>
@@ -425,7 +496,7 @@
 
                 <!-- ========  // END CONTENT ======== -->
 
-                
+
             </div>
 
             <!-- // end div[role=main] -->
@@ -444,8 +515,8 @@
                             <div class="carousel-inner" role="listbox">
                                 <div class="item active"> <a href="about.php" class="about-us__tag">CONTA CORRENTE SS Entregas</a><img class="about-us__image" src="assets/images/image-51.jpg" alt="About us image">
                                     <h5 class="about-us__name">Abra uma conta corrente e facilite sua vida</h5>
-                                    <p class="about-us__description">Abra uma conta corrente com a SS Entregas, é rápido de abrir, fácil de controlar e seguro.</p> 
-                                    <p class="about-us__description">Cadastre-se como cliente da SS Entregas e coloque créditos através de boleta ou cartão de crédito, assim você pode fazer sua solicitação de entrega online, de forma rápida e independente.</p> 
+                                    <p class="about-us__description">Abra uma conta corrente com a SS Entregas, é rápido de abrir, fácil de controlar e seguro.</p>
+                                    <p class="about-us__description">Cadastre-se como cliente da SS Entregas e coloque créditos através de boleta ou cartão de crédito, assim você pode fazer sua solicitação de entrega online, de forma rápida e independente.</p>
 									<a href="about.php" class="read-more  about-us__link">Saiba mais</a></div>
                             </div>
                         </div>

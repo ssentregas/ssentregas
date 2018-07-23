@@ -29,7 +29,8 @@ $(document).ready(function(){
 
 	$('#add_cliente').submit(function(){
 
-		if($('#add_cliente input[name="senha"]').val() != $('#confirm_senha').val()) {
+		if($('#senha').val() != $('#confirm_senha').val()) {
+			alert($('#senha').val() + $('#confirm_senha').val());
 			alert('Os campos de senha estão diferentes.');
 			return false;
 		}

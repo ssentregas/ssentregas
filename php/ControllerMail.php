@@ -20,7 +20,7 @@ class ControllerMail{
 
 		$mail->SMTPAuth   = true;                  // enable SMTP authentication
 		$mail->SMTPSecure = false;                 // sets the prefix to the servier
-		$mail->Port       = 25;                   // set the SMTP port for the GMAIL server
+		$mail->Port       = 587;                   // set the SMTP port for the GMAIL server
 		$mail->Username   = "suporte@ssentregas.com.br";  // GMAIL username
 		$mail->Password   = "Mudar_123";            // GMAIL password
 

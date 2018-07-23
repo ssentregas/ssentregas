@@ -216,7 +216,7 @@ class ControllerCliente extends ControllerBd
             'tempo' => $tempo,
             'distancia_total' => $distancia_total,
             'total_distancia' => $distancia_pontos,
-            'valor_total' => number_format(floor($total_pagar), 2, ',', '.') . ' R$'
+            'valor_total' => 'R$ ' . number_format(floor($total_pagar), 2, ',', '.')
         );
 
         echo json_encode($return);
@@ -263,13 +263,13 @@ class ControllerCliente extends ControllerBd
 	public function addCotacao($dados){
 
         //salvando contato do cliente
-	    /*$dados_cliente = array(
+	    $dados_cliente = array(
             'nome'  => $dados['nome'],
             'email'  => $dados['email'],
             'celular'  => $dados['celular'],
         );
 
-        $this->addCliente($dados_cliente);*/
+        $clienteId = $this->addClienteOrcamento($dados_cliente);
 
         //salvando pontos e calculando valor e distância
         $ponto = array('Origem','Destino','Ponto Extra');
@@ -286,18 +286,14 @@ class ControllerCliente extends ControllerBd
             $mensagem .= '<br><br>';
         }
 
-        $sql = "INSERT INTO entrega(nome, telefone, email, valor, trajeto, base, distancias, distancia_total, tempo, observacao, date_created, last_updated, status_entrega, version) VALUES (:nome, :telefone, :email, :valor, :trajeto, :base, :distancias, :distancia_total, :tempo, :observacao, :date_created, :last_updated, :status_entrega, 1)";
+        $sql = "INSERT INTO entrega(cliente_id, valor, trajeto, base, distancias, distancia_total, tempo, observacao, pagamento, date_created, last_updated, status_entrega, version) VALUES (:cliente_id, :valor, :trajeto, :base, :distancias, :distancia_total, :tempo, :observacao, :pagamento, :date_created, :last_updated, :status_entrega, 1)";
         $stmt = $this->conn->prepare($sql);
 
         $data = date('Y-m-d H:i:s');
 
-//        $contato =  '<b>Nome:</b> '.$dados['nome'] . '<br><b>Email:</b> ' .$dados['email'] . '<br><b>Telefone:</b> '.$dados['celular'];
-
         $status_entrega = 'PEDIDO';
 
-        $stmt->bindParam(':nome', $dados['nome']);
-        $stmt->bindParam(':telefone', $dados['celular']);
-        $stmt->bindParam(':email', $dados['email']);
+        $stmt->bindParam(':cliente_id', $clienteId);
         $stmt->bindParam(':valor', $dados['valor']);
         $stmt->bindParam(':trajeto', $mensagem);
         $stmt->bindParam(':base', $dados['base']);
@@ -305,17 +301,50 @@ class ControllerCliente extends ControllerBd
         $stmt->bindParam(':distancia_total', $dados['distancia_total']);
         $stmt->bindParam(':tempo', $dados['tempo']);
         $stmt->bindParam(':observacao', $dados['descricao']);
+        $stmt->bindParam(':pagamento', $dados['pagamento']);
         $stmt->bindParam(':date_created', $data);
         $stmt->bindParam(':last_updated', $data);
         $stmt->bindParam(':status_entrega', $status_entrega);
 
         return $stmt->execute();
+    }
 
-        /*$mensagem .= $dados['descricao'];
-        $mensagem .= '<br><br>Valor cobrado: R$ '.$dados['valor'];
-        $mensagem .= '<br><br>Nome do contato: '.$dados['nome'];
-        $mensagem .= '<br>E-mail: '.$dados['email'].' / Telefone: '.$dados['telefone'];*/
+    public function addEntregaCliente($dados){
+        //salvando pontos e calculando valor e distância
+        $ponto = array('Origem','Destino','Ponto Extra');
 
+        $mensagem = '';
+
+        foreach ($dados['pontos'] as $key => $value) {
+
+            $ds_ponto = isset($ponto[$value['ordem']]) ? $ponto[$value['ordem']] : $ponto[2];
+
+            $mensagem .= '<b>'.$ds_ponto.'</b>: '.$value['origem'];
+            $mensagem .= '<br><b>Complemento:</b> '.$value['complemento'];
+            $mensagem .= '<br><b>Tarefa:</b> '.$value['observacao'];
+            $mensagem .= '<br><br>';
+        }
+
+        $sql = "INSERT INTO entrega(cliente_id, valor, trajeto, base, distancias, distancia_total, tempo, pagamento, date_created, last_updated, status_entrega, version) VALUES (:cliente_id, :valor, :trajeto, :base, :distancias, :distancia_total, :tempo, :pagamento, :date_created, :last_updated, :status_entrega, 1)";
+        $stmt = $this->conn->prepare($sql);
+
+        $data = date('Y-m-d H:i:s');
+
+        $status_entrega = 'PEDIDO';
+
+        $stmt->bindParam(':cliente_id', $_SESSION['id_cliente']);
+        $stmt->bindParam(':valor', $dados['valor']);
+        $stmt->bindParam(':trajeto', $mensagem);
+        $stmt->bindParam(':base', $dados['base']);
+        $stmt->bindParam(':distancias', $dados['distancias']);
+        $stmt->bindParam(':distancia_total', $dados['distancia_total']);
+        $stmt->bindParam(':tempo', $dados['tempo']);
+        $stmt->bindParam(':pagamento', $dados['pagamento']);
+        $stmt->bindParam(':date_created', $data);
+        $stmt->bindParam(':last_updated', $data);
+        $stmt->bindParam(':status_entrega', $status_entrega);
+
+        return $stmt->execute();
     }
 
 	public function add($dados) {
@@ -343,6 +372,29 @@ class ControllerCliente extends ControllerBd
 
 		return json_encode($this->login($dados));
 	}
+
+    public function addClienteOrcamento($dados) {
+
+        $validaEmail = $this->validateEmail($dados['email']);
+
+        if(empty($validaEmail)) {
+
+            $sql = "INSERT INTO cliente(nm_cliente, email, celular, st_ativo, dt_inclusao) VALUES (:nm_cliente, :email, :celular, 1, :dt_inclusao)";
+            $stmt = $this->conn->prepare($sql);
+
+            $data = date('Y-m-d H:i:s');
+
+            $celular = isset($dados['celular']) ? $dados['celular'] : '';
+
+            $stmt->bindParam(':nm_cliente', $dados['nome']);
+            $stmt->bindParam(':email', $dados['email']);
+            $stmt->bindParam(':celular', $celular);
+            $stmt->bindParam(':dt_inclusao', $data);
+
+            $stmt->execute();
+
+        }
+    }
 
 	public function update($dados) {
 
@@ -470,6 +522,9 @@ switch ($_GET['action']) {
 		break;
     case 'addCotacao':
         echo $t->addCotacao($_POST);
+        break;
+    case 'addEntregaCliente':
+        echo $t->addEntregaCliente($_POST);
         break;
     case 'calcPontos':
         echo $t->calcPontos($_POST);

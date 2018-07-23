@@ -98,8 +98,8 @@
                                                         <input type="text" name="celular" size="40" class="form-text" placeholder="Celular">
                                                     </div>                                              
                                                     <div class="c-form-group">
-                                                        <input type="password" name="senha" size="40" class="form-text" required="required" placeholder="Senha">
-                                                    </div>                                         
+                                                        <input type="password" id="senha" name="senha" size="40" class="form-text" required="required" placeholder="Senha">
+                                                    </div>
                                                     <div class="c-form-group">
                                                         <input type="password" id="confirm_senha" size="40" class="form-text" required="required" placeholder="Repetir senha">
                                                     </div>

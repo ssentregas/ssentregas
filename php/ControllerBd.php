@@ -3,9 +3,9 @@ error_reporting(E_ALL);
 session_start();
 
 define('MYSQL_HOST', 'robb0283.publiccloud.com.br');
-define('MYSQL_USER', 'frank_prod');
+define('MYSQL_USER', 'frank_dev');
 define('MYSQL_PASSWORD', 'Frank2019@');
-define('MYSQL_DB_NAME', 'frankfkl1_ssentregas_prod');
+define('MYSQL_DB_NAME', 'frankfkl1_ssentregas_dev');
 
 class ControllerBd
 {

@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd700e6a-6d04-4836-b123-b1673d7a422f" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout/orcamento.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/layout/header.html" afterPath="$PROJECT_DIR$/layout/header.html" />
+      <change beforePath="$PROJECT_DIR$/area_cliente.php" afterPath="$PROJECT_DIR$/area_cliente_old.php" />
+      <change beforePath="$PROJECT_DIR$/assets/js/sign_in.js" afterPath="$PROJECT_DIR$/assets/js/sign_in.js" />
+      <change beforePath="$PROJECT_DIR$/orcamento.php" afterPath="$PROJECT_DIR$/orcamento.php" />
+      <change beforePath="$PROJECT_DIR$/php/ControllerBd.php" afterPath="$PROJECT_DIR$/php/ControllerBd.php" />
+      <change beforePath="$PROJECT_DIR$/php/ControllerCliente.php" afterPath="$PROJECT_DIR$/php/ControllerCliente.php" />
+      <change beforePath="$PROJECT_DIR$/php/ControllerMail.php" afterPath="$PROJECT_DIR$/php/ControllerMail.php" />
+      <change beforePath="$PROJECT_DIR$/sign_in.php" afterPath="$PROJECT_DIR$/sign_in.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,21 +27,29 @@
       <file leaf-file-name="orcamento.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/orcamento.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2286">
-              <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+            <state relative-caret-position="1962">
+              <caret line="109" column="26" lean-forward="false" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/layout/header.html">
+      <file leaf-file-name="area_cliente.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/area_cliente.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="75" column="31" lean-forward="true" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
-              <folding>
-                <element signature="n#style#0;n#div#4;n#div#1;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="200">
+              <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="orcamento.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/layout/orcamento.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -48,6 +62,14 @@
       <find>cotacao</find>
       <find>tarifa_item</find>
       <find>header-widgets</find>
+      <find>valor_roteiro</find>
+      <find>addCota</find>
+      <find>finalizar</find>
+      <find>formulario</find>
+      <find>panel-collapse</find>
+      <find>alert</find>
+      <find>click_senha</find>
+      <find>esque</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -56,10 +78,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/orcamento.php" />
-        <option value="$PROJECT_DIR$/php/ControllerBd.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/php/ControllerBd.php" />
+        <option value="$PROJECT_DIR$/php/ControllerCliente.php" />
+        <option value="$PROJECT_DIR$/php/ControllerMail.php" />
+        <option value="$PROJECT_DIR$/assets/js/sign_in.js" />
+        <option value="$PROJECT_DIR$/sign_in.php" />
+        <option value="$PROJECT_DIR$/area_cliente_old.php" />
+        <option value="$PROJECT_DIR$/area_cliente.php" />
+        <option value="$PROJECT_DIR$/layout/menu_orcamento.php" />
         <option value="$PROJECT_DIR$/layout/header.html" />
+        <option value="$PROJECT_DIR$/orcamento.php" />
+        <option value="$PROJECT_DIR$/layout/orcamento.php" />
       </list>
     </option>
   </component>
@@ -110,6 +140,7 @@
     <option name="width" value="1329" />
     <option name="height" value="780" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -125,6 +156,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -138,11 +170,15 @@
               <item name="ssentregas" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="layout" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="ssentregas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssentregas" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
@@ -152,9 +188,12 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///opt/lampp/htdocs/ssentregas/layout/header.html" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/layout" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/assets/images" />
     </key>
   </component>
@@ -232,11 +271,13 @@
       <workItem from="1532030139372" duration="70000" />
       <workItem from="1532031861420" duration="132000" />
       <workItem from="1532119361943" duration="1451000" />
+      <workItem from="1532301734056" duration="7789000" />
+      <workItem from="1532311763272" duration="17319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6077000" />
+    <option name="totallyTimeSpent" value="31339000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="-11" width="1329" height="780" extended-state="6" />
@@ -284,6 +325,61 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ssentregas.sql" />
+    <entry file="file://$PROJECT_DIR$/php_/Ctrl_OS_Cliente.php" />
+    <entry file="file://$PROJECT_DIR$/php_/Ctrl_OS_LocalCliente.php" />
+    <entry file="file://$PROJECT_DIR$/ssentregas.sql" />
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="122" column="28" lean-forward="true" selection-start-line="120" selection-start-column="28" selection-end-line="122" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-696">
+          <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orcamento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="47" lean-forward="true" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/ControllerBd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="50" lean-forward="false" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/ControllerCliente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <marker date="1532324732752" expanded="true" signature="244:296" ph="SELECT * FRO... cliente" />
+            <marker date="1532324732752" expanded="true" signature="471:500" ph="SELECT * FRO... cliente" />
+            <marker date="1532324732752" expanded="true" signature="4148:4325" ph="SELECT valor... tarifa" />
+            <marker date="1532324732752" expanded="true" signature="6525:6702" ph="SELECT valor... tarifa" />
+            <marker date="1532324732752" expanded="true" signature="11983:12308" ph="INSERT INTO entrega... " />
+            <marker date="1532324732752" expanded="true" signature="13767:14067" ph="INSERT INTO entrega... " />
+            <marker date="1532324732752" expanded="true" signature="15070:15211" ph="INSERT INTO cliente... " />
+            <marker date="1532324732752" expanded="true" signature="15848:15974" ph="INSERT INTO cliente... " />
+            <marker date="1532324732752" expanded="true" signature="16618:16782" ph="UPDATE cliente... " />
+            <marker date="1532324732752" expanded="true" signature="17700:17754" ph="UPDATE cliente... " />
+            <marker date="1532324732752" expanded="true" signature="18793:18843" ph="SELECT * FRO... cliente" />
+            <marker date="1532324732752" expanded="true" signature="19052:19130" ph="SELECT id_cl... cliente" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/orcamento.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -305,15 +401,30 @@
     <entry file="file://$PROJECT_DIR$/ssentregas.sql" />
     <entry file="file://$PROJECT_DIR$/php/ControllerCliente.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="491" column="1" lean-forward="true" selection-start-line="491" selection-start-column="1" selection-end-line="491" selection-end-column="1" />
+        <state relative-caret-position="450">
+          <caret line="238" column="33" lean-forward="true" selection-start-line="238" selection-start-column="33" selection-end-line="239" selection-end-column="26" />
+          <folding>
+            <marker date="1532324732752" expanded="true" signature="244:296" ph="SELECT * FRO... cliente" />
+            <marker date="1532324732752" expanded="true" signature="471:500" ph="SELECT * FRO... cliente" />
+            <marker date="1532324732752" expanded="true" signature="4148:4325" ph="SELECT valor... tarifa" />
+            <marker date="1532324732752" expanded="true" signature="6525:6702" ph="SELECT valor... tarifa" />
+            <marker date="1532324732752" expanded="true" signature="11983:12308" ph="INSERT INTO entrega... " />
+            <marker date="1532324732752" expanded="true" signature="13767:14067" ph="INSERT INTO entrega... " />
+            <marker date="1532324732752" expanded="true" signature="15070:15211" ph="INSERT INTO cliente... " />
+            <marker date="1532324732752" expanded="true" signature="15848:15974" ph="INSERT INTO cliente... " />
+            <marker date="1532324732752" expanded="true" signature="16618:16782" ph="UPDATE cliente... " />
+            <marker date="1532324732752" expanded="true" signature="17700:17754" ph="UPDATE cliente... " />
+            <marker date="1532324732752" expanded="true" signature="18793:18843" ph="SELECT * FRO... cliente" />
+            <marker date="1532324732752" expanded="true" signature="19052:19130" ph="SELECT id_cl... cliente" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/ControllerBd.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="7" column="53" lean-forward="true" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
+          <caret line="7" column="50" lean-forward="false" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -326,8 +437,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/orcamento.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2286">
-          <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+        <state relative-caret-position="54">
+          <caret line="3" column="47" lean-forward="true" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -336,9 +447,219 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="75" column="31" lean-forward="true" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orcamento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/ControllerBd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="48" lean-forward="true" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssentregas.sql" />
+    <entry file="file://$PROJECT_DIR$/php_/Ctrl_OS_Cliente.php" />
+    <entry file="file://$PROJECT_DIR$/php_/Ctrl_OS_LocalCliente.php" />
+    <entry file="file://$PROJECT_DIR$/ssentregas.sql" />
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="122" column="28" lean-forward="true" selection-start-line="120" selection-start-column="28" selection-end-line="122" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="75" column="31" lean-forward="true" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orcamento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="195" column="41" lean-forward="false" selection-start-line="195" selection-start-column="41" selection-end-line="195" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/ControllerCliente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4158">
+          <caret line="231" column="99" lean-forward="false" selection-start-line="231" selection-start-column="99" selection-end-line="231" selection-end-column="99" />
           <folding>
-            <element signature="n#style#0;n#div#4;n#div#1;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1532324732752" expanded="true" signature="244:296" ph="SELECT * FRO... cliente" />
+            <marker date="1532324732752" expanded="true" signature="471:500" ph="SELECT * FRO... cliente" />
+            <marker date="1532324732752" expanded="true" signature="4148:4325" ph="SELECT valor... tarifa" />
+            <marker date="1532324732752" expanded="true" signature="6525:6702" ph="SELECT valor... tarifa" />
+            <marker date="1532324732752" expanded="true" signature="11983:12308" ph="INSERT INTO entrega... " />
+            <marker date="1532324732752" expanded="true" signature="13767:14067" ph="INSERT INTO entrega... " />
+            <marker date="1532324732752" expanded="true" signature="15070:15211" ph="INSERT INTO cliente... " />
+            <marker date="1532324732752" expanded="true" signature="15848:15974" ph="INSERT INTO cliente... " />
+            <marker date="1532324732752" expanded="true" signature="16618:16782" ph="UPDATE cliente... " />
+            <marker date="1532324732752" expanded="true" signature="17700:17754" ph="UPDATE cliente... " />
+            <marker date="1532324732752" expanded="true" signature="18793:18843" ph="SELECT * FRO... cliente" />
+            <marker date="1532324732752" expanded="true" signature="19052:19130" ph="SELECT id_cl... cliente" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/ControllerBd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orcamento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/ControllerBd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="48" lean-forward="true" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssentregas.sql" />
+    <entry file="file://$PROJECT_DIR$/php_/Ctrl_OS_Cliente.php" />
+    <entry file="file://$PROJECT_DIR$/php_/Ctrl_OS_LocalCliente.php" />
+    <entry file="file://$PROJECT_DIR$/ssentregas.sql" />
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="122" column="28" lean-forward="true" selection-start-line="120" selection-start-column="28" selection-end-line="122" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/session/session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-435">
+          <caret line="178" column="9" lean-forward="false" selection-start-line="178" selection-start-column="9" selection-end-line="178" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/ControllerBd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="43" lean-forward="false" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/ControllerCliente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="426" column="0" lean-forward="true" selection-start-line="426" selection-start-column="0" selection-end-line="426" selection-end-column="0" />
+          <folding>
+            <marker date="1532324732752" expanded="true" signature="244:296" ph="SELECT * FRO... cliente" />
+            <marker date="1532324732752" expanded="true" signature="471:500" ph="SELECT * FRO... cliente" />
+            <marker date="1532324732752" expanded="true" signature="4148:4325" ph="SELECT valor... tarifa" />
+            <marker date="1532324732752" expanded="true" signature="6525:6702" ph="SELECT valor... tarifa" />
+            <marker date="1532324732752" expanded="true" signature="11983:12308" ph="INSERT INTO entrega... " />
+            <marker date="1532324732752" expanded="true" signature="13767:14067" ph="INSERT INTO entrega... " />
+            <marker date="1532324732752" expanded="true" signature="15070:15211" ph="INSERT INTO cliente... " />
+            <marker date="1532324732752" expanded="true" signature="15848:15974" ph="INSERT INTO cliente... " />
+            <marker date="1532324732752" expanded="true" signature="16618:16782" ph="UPDATE cliente... " />
+            <marker date="1532324732752" expanded="true" signature="17700:17754" ph="UPDATE cliente... " />
+            <marker date="1532324732752" expanded="true" signature="18793:18843" ph="SELECT * FRO... cliente" />
+            <marker date="1532324732752" expanded="true" signature="19052:19130" ph="SELECT id_cl... cliente" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign_in.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="100" column="88" lean-forward="false" selection-start-line="100" selection-start-column="88" selection-end-line="100" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout/menu_orcamento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="99" lean-forward="false" selection-start-line="19" selection-start-column="99" selection-end-line="19" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/area_cliente_old.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="324" column="60" lean-forward="true" selection-start-line="324" selection-start-column="60" selection-end-line="324" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/sign_in.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/ControllerMail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="33" column="4" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orcamento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1962">
+          <caret line="109" column="26" lean-forward="false" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/area_cliente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout/orcamento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
