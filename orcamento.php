@@ -87,7 +87,7 @@
                     pagamento += '<br><b>Troco para:</b> R$ ' + $("#valor-troco").val();
                 }
 
-                alert(pagamento);
+                //alert(pagamento);
 
         		$.ajax({
         			url: 'php/ControllerCliente.php?action=addCotacao',

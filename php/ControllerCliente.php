@@ -71,27 +71,51 @@ class ControllerCliente extends ControllerBd
         $base_saocristovao_pontofinal = $this->consultaGoogle('R. do Bonfim, 363 - São Cristóvão, Rio de Janeiro - RJ, 20930-450, Brasil', $trajetos[count($trajetos) - 1]);
 
         if ($base_saocristovao_pontoinicial['distance']['value'] > 20.000) {
-            $dist_base += $base_barra_pontoinicial['distance']['value'];
-            $total_tempo += $base_barra_pontoinicial['duration']['value'];
-            $dist_base += $base_barra_pontofinal['distance']['value'];
+            $base = 'Barra';
             $dist_base_coleta = $base_barra_pontoinicial['distance']['value'];
             $dist_entrega_base = $base_barra_pontofinal['distance']['value'];
-            $base = 'Barra';
+            $total_tempo += $base_barra_pontoinicial['duration']['value'];
+            if($dist_base_coleta < 12){
+                $dist_base += 12;
+            }else{
+                $dist_base += $dist_base_coleta;
+            }
+            if($dist_entrega_base < 12){
+                $dist_base += 12;
+            }else{
+                $dist_base += $dist_entrega_base;
+            }
         } else {
             if ($base_barra_pontoinicial['distance']['value'] < $base_saocristovao_pontoinicial['distance']['value']) {
-                $dist_base += $base_barra_pontoinicial['distance']['value'];
-                $total_tempo += $base_barra_pontoinicial['duration']['value'];
-                $dist_base += $base_barra_pontofinal['distance']['value'];
+                $base = 'Barra';
                 $dist_base_coleta = $base_barra_pontoinicial['distance']['value'];
                 $dist_entrega_base = $base_barra_pontofinal['distance']['value'];
-                $base = 'Barra';
+                $total_tempo += $base_barra_pontoinicial['duration']['value'];
+                if($dist_base_coleta < 12){
+                    $dist_base += 12;
+                }else{
+                    $dist_base += $dist_base_coleta;
+                }
+                if($dist_entrega_base < 12){
+                    $dist_base += 12;
+                }else{
+                    $dist_base += $dist_entrega_base;
+                }
             } else {
-                $dist_base += $base_saocristovao_pontoinicial['distance']['value'];
-                $total_tempo += $base_saocristovao_pontoinicial['duration']['value'];
-                $dist_base += $base_saocristovao_pontofinal['distance']['value'];
+                $base = 'São Cristovão';
                 $dist_base_coleta = $base_saocristovao_pontoinicial['distance']['value'];
                 $dist_entrega_base = $base_saocristovao_pontofinal['distance']['value'];
-                $base = 'São Cristovão';
+                $total_tempo += $base_saocristovao_pontoinicial['duration']['value'];
+                if($dist_base_coleta < 12){
+                    $dist_base += 12;
+                }else{
+                    $dist_base += $dist_base_coleta;
+                }
+                if($dist_entrega_base < 12){
+                    $dist_base += 12;
+                }else{
+                    $dist_base += $dist_entrega_base;
+                }
             }
         }
 
@@ -393,6 +417,19 @@ class ControllerCliente extends ControllerBd
 
             $stmt->execute();
 
+        }else{
+            $sql = "UPDATE cliente SET nm_cliente=:nm_cliente, email=:email, celular=:celular WHERE id_cliente = :id_cliente";
+
+            $stmt = $this->conn->prepare($sql);
+
+            $stmt->bindParam(':nm_cliente', $dados['nome']);
+            $stmt->bindParam(':email', $dados['email']);
+            $stmt->bindParam(':celular', $celular);
+            $stmt->bindParam(':id_cliente', $validaEmail[0]['id_cliente']);
+
+            $stmt->execute();
+
+            return $validaEmail[0]['id_cliente'];
         }
     }
 
