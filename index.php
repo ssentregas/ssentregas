@@ -100,7 +100,7 @@
                         <div class="panel-grid row m-b-lg">
                             <div class="col-md-6">
                                 <div class="so-panel widget widget_pw_banner widget-banner panel-first-child panel-last-child" id="panel-6-1-0-0">
-                                    <a class="banner" href="http://frequently-asked-questions" target="_self">
+                                    <a class="banner" href="http://localhost/ssentregas/sign_in.php" target="_self">
                                         <div class="banner__title"> Faça seu cadastro</div>
                                         <div class="banner__content"> Acompanhe suas entregas.</div>
                                     </a>
@@ -108,7 +108,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="so-panel widget widget_pw_banner widget-banner panel-first-child panel-last-child" id="panel-6-1-1-0">
-                                    <a class="banner" href="http://shop" target="_self">
+                                    <a class="banner" href="http://localhost/ssentregas/orcamento.php" target="_self">
                                         <div class="banner__title"> Faça uma cotação</div>
                                         <div class="banner__content"> Calcule o valor de uma entrega.</div>
                                     </a>
@@ -243,7 +243,7 @@
                                     <h5 class="about-us__name">Abra uma conta corrente e facilite sua vida</h5>
                                     <p class="about-us__description">Abra uma conta corrente com a SS Entregas, é rápido de abrir, fácil de controlar e seguro.</p> 
                                     <p class="about-us__description">Cadastre-se como cliente da SS Entregas e coloque créditos através de boleta ou cartão de crédito, assim você pode fazer sua solicitação de entrega online, de forma rápida e independente.</p> 
-									<a href="about.php" class="read-more  about-us__link">Saiba mais</a></div>
+									<a href="http://ssentregas.com.br/pagseguro.php" class="read-more  about-us__link">Saiba mais</a></div>
                             </div>
                         </div>
                     </div>
@@ -252,7 +252,7 @@
                             <p class="skype-button__title">Ligue pelo Skype</p>
                         </a>
                     </div>
-                    <div class="widget  widget_text">
+                    <!--<div class="widget  widget_text">
                         <h4 class="sidebar__headings">Formulários Expresso</h4>
                         <div class="textwidget">Emita aqui seus formulários, faça buscas de informações e veja o histórico da entrega. Desfrute destas facilidades.
                             <br>
@@ -261,7 +261,7 @@
 							<a class="btn  btn-default  fullwidth" href="assets/images/brochure.pdf" target="_self"><i class="fa fa-file-word-o"></i> Comprovante de entrega</a>
 							<a class="btn  btn-default  fullwidth" href="assets/images/brochure.pdf" target="_self"><i class="fa fa-file-pdf-o"></i> Posição de entrega</a>
 							<a class="btn  btn-default  fullwidth" href="assets/images/brochure.pdf" target="_self"><i class="fa fa-file-word-o"></i> Histórico da entrega</a>						</div>
-                    </div>
+                    </div>-->
 					
                     <div class="widget  widget_text">
 						<div class="item active"> <img class="about-us__image" src="assets/images/messenger_code_1678736119055047.png" alt="Messenger Code">
