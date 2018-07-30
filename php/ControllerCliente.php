@@ -234,9 +234,11 @@ class ControllerCliente extends ControllerBd
         $minutos = ceil($total_tempo/60);
         $tempo  = floor($minutos/60).':'.$minutos%60;
 
+
+
         $return = array(
             'base' => $base,
-            'distancias' => '<b>Total:</b> '. $distancia_total . ' km<br><b>Base:</b> '. $base. '<br><b>Base -> Coleta:</b> '. $dist_base_coleta . ' km<br><b>Coleta -> Entrega:</b> '. $dist_pontos_real .' km<br><b>Entrega -> Base:</b> '. $dist_entrega_base .' km',
+            'distancias' => '<b>Tipo de Veículo: </b>' . $tipo_transporte .'<br><b>Total:</b> '. $distancia_total . ' km<br><b>Base:</b> '. $base. '<br><b>Base -> Coleta:</b> '. $dist_base_coleta . ' km<br><b>Coleta -> Entrega:</b> '. $dist_pontos_real .' km<br><b>Entrega -> Base:</b> '. $dist_entrega_base .' km',
             'tempo' => $tempo,
             'distancia_total' => $distancia_total,
             'total_distancia' => $distancia_pontos,

@@ -27,7 +27,13 @@
         $(document).ready(function(){
 
             $('#forma-pagamento').on('change', function() {
-                // alert( this.value );
+                // alert( this.value );pagamento-feito
+
+                if(this.value == 'cartao' || this.value == 'dinheiro'){
+                    $('#pagamento-origem').show();
+                }else{
+                    $('#pagamento-origem').hide();
+                }
 
                 if(this.value == 'dinheiro'){
                     $('#form-troco').show();
@@ -68,6 +74,12 @@
                 if($('#telefone').val() == ''){
                     alert('Digite o telefone');
                     $('#telefone').focus();
+                    return false;
+                }
+
+                if($('#forma-pagamento').val() == 'selecione'){
+                    alert('Selecione a forma de pagamento');
+                    $('#forma-pagamento').focus();
                     return false;
                 }
 
@@ -457,13 +469,14 @@
                                             <div class="col-md-3">
                                                 <label>Forma de Pagamento:</label>
                                                 <select id="forma-pagamento">
-                                                    <option value="cartao" selected>Cartao</option>
+                                                    <option value="selecione" selected>Selecione</option>
+                                                    <option value="cartao">Cartão Presencial</option>
                                                     <option value="dinheiro">Dinheiro</option>
+                                                    <option value="pagseguro">Cartão Site</option>
                                                     <option value="faturado">Faturado</option>
-                                                    <option value="pagseguro">PagSeguro</option>
                                                 </select>
                                             </div>
-                                            <div class="col-md-3">
+                                            <div style="display: none" id="pagamento-origem" class="col-md-3" >
                                                 <label>Pagamento feito na:</label>
                                                 <select id="pagamento-feito">
                                                     <option value="origem" selected>A. Origem</option>
