@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd700e6a-6d04-4836-b123-b1673d7a422f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/orcamento.php" afterPath="$PROJECT_DIR$/orcamento.php" />
-      <change beforePath="$PROJECT_DIR$/php/ControllerCliente.php" afterPath="$PROJECT_DIR$/php/ControllerCliente.php" />
+      <change beforePath="$PROJECT_DIR$/layout/header.html" afterPath="$PROJECT_DIR$/layout/header.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/layout/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="114" column="79" lean-forward="false" selection-start-line="114" selection-start-column="79" selection-end-line="114" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -42,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControllerCliente.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ControllerCliente.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/ControllerCliente.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="353" column="44" lean-forward="false" selection-start-line="353" selection-start-column="44" selection-end-line="353" selection-end-column="44" />
+            <state relative-caret-position="1607">
+              <caret line="336" column="0" lean-forward="true" selection-start-line="336" selection-start-column="0" selection-end-line="336" selection-end-column="0" />
               <folding>
                 <marker date="1532972169085" expanded="true" signature="244:296" ph="SELECT * FRO... cliente" />
                 <marker date="1532972169085" expanded="true" signature="471:500" ph="SELECT * FRO... cliente" />
@@ -124,10 +122,10 @@
         <option value="$PROJECT_DIR$/layout/orcamento.php" />
         <option value="$PROJECT_DIR$/pagseguro.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/layout/header.html" />
         <option value="$PROJECT_DIR$/orcamento.php" />
         <option value="$PROJECT_DIR$/php/ControllerCliente.php" />
         <option value="$PROJECT_DIR$/php/ControllerBd.php" />
+        <option value="$PROJECT_DIR$/layout/header.html" />
       </list>
     </option>
   </component>
@@ -310,12 +308,12 @@
       <workItem from="1532792036005" duration="1698000" />
       <workItem from="1532875617216" duration="1193000" />
       <workItem from="1532888715577" duration="690000" />
-      <workItem from="1532968188874" duration="4153000" />
+      <workItem from="1532968188874" duration="4251000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67992000" />
+    <option name="totallyTimeSpent" value="68090000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="39" y="-4" width="1327" height="772" extended-state="6" />
@@ -329,7 +327,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24474475" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24474475" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -654,14 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layout/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/orcamento.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -684,8 +674,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/ControllerCliente.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="353" column="44" lean-forward="false" selection-start-line="353" selection-start-column="44" selection-end-line="353" selection-end-column="44" />
+        <state relative-caret-position="1607">
+          <caret line="336" column="0" lean-forward="true" selection-start-line="336" selection-start-column="0" selection-end-line="336" selection-end-column="0" />
           <folding>
             <marker date="1532972169085" expanded="true" signature="244:296" ph="SELECT * FRO... cliente" />
             <marker date="1532972169085" expanded="true" signature="471:500" ph="SELECT * FRO... cliente" />
@@ -701,6 +691,14 @@
             <marker date="1532972169085" expanded="true" signature="19926:19976" ph="SELECT * FRO... cliente" />
             <marker date="1532972169085" expanded="true" signature="20185:20263" ph="SELECT id_cl... cliente" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="114" column="79" lean-forward="false" selection-start-line="114" selection-start-column="79" selection-end-line="114" selection-end-column="79" />
+          <folding />
         </state>
       </provider>
     </entry>
